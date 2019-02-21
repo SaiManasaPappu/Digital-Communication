@@ -1,1 +1,1 @@
-# Digital-Communication
+# Probability-in-Communication
