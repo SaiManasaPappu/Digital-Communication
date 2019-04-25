@@ -1,1 +1,3 @@
 
+Pulse shaping: square root raised cosine at transmitter end, matched filter at receiver end
+Pyhton simulation of BER for different SNR's
