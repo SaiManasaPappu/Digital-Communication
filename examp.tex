@@ -1,0 +1,144 @@
+\documentclass{beamer}
+\mode<presentation>
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{advdate}
+\usepackage{adjustbox}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{gensymb}
+\usepackage{url}
+\usepackage{gensymb}
+
+\def\UrlBreaks{\do\/\do-}
+\usetheme{Boadilla}
+\usecolortheme{lily}
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,mathright]{author in head/foot}%
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\setbeamertemplate{navigation symbols}{}
+
+\providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr
+\providecommand{\nPr}[2]{\,^{#1}P_{#2}} % nPr
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\mathmathleft(#1\mathmathright)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\mathleft(#1\mathright)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\mathleft[#1\mathright]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\mathleft[#1\mathright.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\mathleft.#1\mathright]}}
+\providecommand{\brak}[1]{\ensuremath{\mathleft(#1\mathright)}}
+\providecommand{\lbrak}[1]{\ensuremath{\mathleft(#1\mathright.}}
+\providecommand{\rbrak}[1]{\ensuremath{\mathleft.#1\mathright)}}
+\providecommand{\cbrak}[1]{\ensuremath{\mathleft\{#1\mathright\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\mathleft\{#1\mathright.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\mathleft.#1\mathright\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\mathleft\vert#1\mathright\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\mathleft[ #1 \mathright]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \mathrightmathleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \mathrightmathleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longmathleftmathrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+%\newcommand{\solution}{\noindent \textbf{Solution: }}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
+
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\numberwithin{equation}{section}
+
+\title{Power Electronics}
+\author{Sai Manasa Pappu \\ Sahir Bansal }
+
+\date{}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Problem Statement}
+Python script to find the output of the 4th order low pass filter, with input as obtained from result of 3.1. 
+\bigbreak
+
+\end{frame}
+
+%\subsection{Literature}
+\section{Solution}
+\subsection{Centre}
+\begin{frame}
+\frametitle{Filter Response}
+%\framesubtitle{Literature}
+\bigbreak
+\bigbreak
+\bigbreak
+Design a 4th order low pass filter with cutoff frequency = 50 Hz. Note that cutoff frequency is same as input frequency. Hence 3dB attenuation. 
+\begin{align}
+%\vec{x}^T\vec{x}-2\vec{O}^T\vec{x} +F = 0
+V_{out} (peak) = \frac{1}{\sqrt{2}}V_{in} (peak) 
+\end{align}
+%
+Also, from phase response, at f = 50 Hz
+\begin{align}
+\angle H(f) = -180 \degree 
+\end{align}
+\end{frame}
+
+
+\begin{frame}
+\begin{figure}
+\frametitle{Magnitude Response}
+\includegraphics[width=1\columnwidth ]{magnitude.png}
+\label{magnitude.png}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Phase Response}
+\begin{figure}
+\centering
+\includegraphics[width=1\columnwidth ]{phase.png}
+\end{figure}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Output}
+\begin{figure}
+\centering
+\includegraphics[width=1\columnwidth ]{output.png}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Github Link for Python Code }
+    https://github.com/SaiManasaPappu/Digital-Communication/blob/master/3.5.py
+\end{frame}
+
+
+\end{document}
