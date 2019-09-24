@@ -83,7 +83,6 @@ columns=fullflexible
 \frametitle{Problem Statement}
 Python script to find the output of the 4th order low pass filter, with input as obtained from result of 3.1. 
 \bigbreak
-
 \end{frame}
 
 %\subsection{Literature}
@@ -95,16 +94,20 @@ Python script to find the output of the 4th order low pass filter, with input as
 \bigbreak
 \bigbreak
 \bigbreak
-Design a 4th order low pass filter with cutoff frequency = 50 Hz. Note that cutoff frequency is same as input frequency. Hence 3dB attenuation. 
+Fourth order low pass filter cutoff frequency = 50 Hz. Note that this frequency is same as the input frequency. 
+\bigbreak
+Hence input will be attenuated by 3dB. 
 \begin{align}
 %\vec{x}^T\vec{x}-2\vec{O}^T\vec{x} +F = 0
 V_{out} (peak) = \frac{1}{\sqrt{2}}V_{in} (peak) 
 \end{align}
 %
-Also, from phase response, at f = 50 Hz
+Phase at f = 50 Hz is 4 x -45{\degree} = -180\degree
+
 \begin{align}
 \angle H(f) = -180 \degree 
 \end{align}
+We can also verify the same by plotting magnitude and phase response of the filter in python.
 \end{frame}
 
 
@@ -124,6 +127,21 @@ Also, from phase response, at f = 50 Hz
 \end{figure}
 \end{frame}
 
+\begin{frame}{}
+\frametitle{Output}
+    Hence output frequency will be same as input frequency, peak voltage reduces by a factor of ${\sqrt{2}}$ and is out of phase with input.
+    \bigbreak
+    
+\begin{align}
+V_{out} = \frac{1}{\sqrt{2}} V_{in} \angle 180 \degree
+\end{align}
+    
+\begin{align}
+V_{out} = -0.707V_{m}sin(wt)
+\end{align}
+    
+\end{frame}
+
 
 
 
@@ -131,13 +149,14 @@ Also, from phase response, at f = 50 Hz
 \frametitle{Output}
 \begin{figure}
 \centering
-\includegraphics[width=1\columnwidth ]{output.png}
+\includegraphics[width=1\columnwidth ]{out.png}
 \end{figure}
 \end{frame}
 
 
 \begin{frame}{Github Link for Python Code }
-    https://github.com/SaiManasaPappu/Digital-Communication/blob/master/3.5.py
+\url{https://github.com/SaiManasaPappu/Digital-Communication/blob/master/3.5.py}
+    
 \end{frame}
 
 
