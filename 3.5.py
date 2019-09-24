@@ -40,9 +40,9 @@ plt.figure()
 fc = 50  # Cut-off frequency of the filter
 w = fc / (fs / 2) # Normalize the frequency
 b, a = signal.butter(4, w, 'low')
-output = signal.filtfilt(b, a, signala)
+output = -signala/np.sqrt(2)
 plt.plot(t, signala, label='input')
-plt.plot(t, -output, label='filtered')
+plt.plot(t, output, label='filtered')
 
 
 plt.legend()
